@@ -1,5 +1,3 @@
-import uploadPhoto from './uploadPhoto.js';
-
-uploadPhoto('image.jpg').catch(error => {
-    console.log(error.message);
-});
+export default function uploadPhoto(fileName) {
+  return Promise.reject(new Error(`${fileName} cannot be processed`));
+}
