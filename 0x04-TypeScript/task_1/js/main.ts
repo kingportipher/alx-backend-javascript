@@ -1,11 +1,11 @@
-interface Teacher {
+export interface Teacher {
   firstName: string;
   lastName: string;
   location: string;
   fullTimeEmployee: boolean;
 }
 
-interface Directors extends Teacher {
+export interface Directors extends Teacher {
   numberOfReports: number;
 }
 
@@ -17,18 +17,17 @@ const director1: Directors = {
   numberOfReports: 17,
 };
 
-interface printTeacherFunction {
+export interface printTeacherFunction {
   (firstName: string, lastName: string): string;
  }
  // Interface describing the constructor
-interface StudentClassConstructor {
+ 
+export interface StudentClassConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
 // Interface describing the class and its methods
-interface StudentClassInterface {
+export interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-
- 
