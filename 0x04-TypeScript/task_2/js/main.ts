@@ -49,4 +49,17 @@ function createEmployee(salary: number | string): Director | Teacher {
   } else {
     return new Director();
   }
+  }
+// isDirector type predicate
+function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+// executeWork function
+function executeWork(employee: Director | Teacher): void {
+  if (isDirector(employee)) {
+    console.log(employee.workDirectorTasks());
+  } else {
+    console.log(employee.workTeacherTasks());
+  }
 }
