@@ -19,4 +19,16 @@ const director1: Directors = {
 
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
+ }
+ // Interface describing the constructor
+interface StudentClassConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
 }
+
+// Interface describing the class and its methods
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+ 
