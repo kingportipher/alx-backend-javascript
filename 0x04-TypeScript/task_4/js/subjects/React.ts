@@ -14,5 +14,7 @@ namespace Subjects {
       } else {
         return 'No available teacher';
       }
-    }
+      }
+      // Exporting the constant react
+  export const react = new React();
   }

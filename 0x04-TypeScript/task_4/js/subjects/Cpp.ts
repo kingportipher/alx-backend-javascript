@@ -20,3 +20,5 @@ namespace Subjects {
   }
 }
 
+ // Exporting the constant cpp
+  export const cpp = new Cpp();
