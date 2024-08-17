@@ -62,4 +62,16 @@ function executeWork(employee: Director | Teacher): void {
   } else {
     console.log(employee.workTeacherTasks());
   }
+  }
+
+// Define the Subjects string literal type
+type Subjects = 'Math' | 'History';
+
+// Implement the teachClass function
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  }
 }
