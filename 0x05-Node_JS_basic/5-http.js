@@ -1,5 +1,4 @@
 const http = require('http');
-const fs = require('fs').promises;
 const countStudents = require('./3-read_file_async');
 
 // Get the database path from the command line arguments
@@ -20,7 +19,8 @@ const app = http.createServer(async (req, res) => {
         
         try {
             // Call the countStudents function and append the output
-            await countStudents(databaseFile);
+            const result = await countStudents(databaseFile);
+            res.write(result + '\n');
         } catch (error) {
             res.write(error.message + '\n');
         }
